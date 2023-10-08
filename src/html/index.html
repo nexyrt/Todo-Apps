@@ -6,6 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Todo Apps</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600&family=Plus+Jakarta+Sans:wght@200;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="../css/output.css">
 </head>
 
@@ -13,36 +16,44 @@
   <header class="bg-violet-700 py-7 px-3">
     <h1 class="text-white font-semibold text-xl">Todo List</h1>
   </header>
-  <input type="text" class="border-2 border-blue-500 outline-none">
 
-  <form id="form" class="w-fit mt-10 mx-auto p-10 shadow-lg rounded-xl">
+  <!-- Add ToDo Modal -->
+  <form id="form" class="flex flex-col gap-y-4 w-1/2 h-fit mx-auto shadow-xl rounded-xl p-10">
+    <!-- Judul Modal -->
+    <h2 class="self-center">Tambah yang harus dilakukan</h2>
 
-    <div class="relative z-0 w-full mb-6 group">
+    <!-- Input ToDo -->
+    <section class="w-full">
+      <label for="inputToDo">Masukkan apa yang harus dilakukan</label><br>
       <input type="text" name="ToDo" id="inputToDo"
-        class="block py-2.5 px-0 w-[50vw] text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-        placeholder=" " required />
-      <label for="inputToDo"
-        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Masukkan
-        hal yang harus dilakukan</label>
-    </div>
+        class="outline-none text-lg rounded-lg bg-violet-50 border border-violet-500 text-gray-900 pl-2.5 p-1.5 w-full">
+    </section>
 
-    <div class="relative max-w-sm">
-      <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor" viewBox="0 0 20 20">
-          <path
-            d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
-        </svg>
+    <!-- Input Date -->
+    <section>
+      <label for="inputDate">Masukkan tanggal harus selesai</label>
+      <div class="relative w-full">
+        <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
+          <svg class="w-4 h-4 text-violet-500 dark:text-violet-400" aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+          </svg>
+        </div>
+        <input datepicker type="text" name="date" id="inputDate"
+          class="text-sm outline-none rounded-lg bg-violet-50 border border-violet-500  w-full pl-10 p-2.5"
+          placeholder="mm/dd/yyyy">
       </div>
-      <input datepicker datepicker-autohide type="text"
-        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-        placeholder="Select date">
-    </div>
+    </section>
 
-    <button type="submit"
-      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+    <!-- Submit Button -->
+    <button type="submit" class="self-end rounded-lg bg-violet-50 border border-violet-500 px-3 py-1.5">Submit</button>
   </form>
+  <!-- END OF Add ToDo Modal -->
 
+  
+
+  <script src="../js/index.js"></script>
   <script src="../../node_modules/flowbite/dist/datepicker.js"></script>
 </body>
 
