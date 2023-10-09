@@ -17,10 +17,11 @@
     <h1 class="text-white font-semibold text-xl">Todo List</h1>
   </header>
 
-  <!-- Add ToDo Modal -->
+  <!-- Add ToDo Card -->
   <form id="form" class="flex flex-col gap-y-4 w-1/2 h-fit mx-auto shadow-xl rounded-xl p-10">
-    <!-- Judul Modal -->
-    <h2 class="self-center">Tambah yang harus dilakukan</h2>
+
+    <!-- Card Title -->
+    <h2 class="self-center font-bold text-lg">Tambah yang harus dilakukan</h2>
 
     <!-- Input ToDo -->
     <section class="w-full">
@@ -48,10 +49,42 @@
 
     <!-- Submit Button -->
     <button type="submit" class="self-end rounded-lg bg-violet-50 border border-violet-500 px-3 py-1.5">Submit</button>
-  </form>
-  <!-- END OF Add ToDo Modal -->
 
-  
+  </form>
+  <!-- END OF Add ToDo Card -->
+
+  <!-- ToDo List -->
+  <section class="flex flex-col w-1/2 h-fit mx-auto shadow-xl rounded-xl p-10">
+
+    <!-- Card Title -->
+    <h2 class="self-center font-bold text-lg">Yang harus dilakukan</h2>
+    <div class="flex flex-col gap-y-5 mt-5" id="todos">
+      <div class="flex p-7 rounded-xl bg-slate-200 shadow-xl justify-between">
+        <!-- Data -->
+        <div>
+          <p>Item 1</p>
+          <p>21/06/2002</p>
+        </div>
+        <!-- Check Button -->
+        <button
+          class="w-10 h-10 bg-[url(../../assets/check-outline.svg)] hover:bg-[url(../../assets/check-solid.svg)] transform transition-all duration-300"></button>
+      </div>
+    </div>
+    <!-- ToDo Card -->
+
+  </section>
+  <!-- END OF ToDo List -->
+
+  <!-- Completed List -->
+
+  <section class="flex flex-col w-1/2 h-fit mx-auto shadow-xl rounded-xl p-10">
+    <h2 class="self-center font-bold text-lg">Yang sudah dilakukan</h2>
+    <div class="flex flex-col gap-y-5 mt-5" id="completed-todos">
+      
+    </div>
+  </section>
+
+  <!-- END OF Completed List -->
 
   <script src="../js/index.js"></script>
   <script src="../../node_modules/flowbite/dist/datepicker.js"></script>
